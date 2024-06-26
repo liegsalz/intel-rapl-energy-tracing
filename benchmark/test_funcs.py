@@ -76,6 +76,10 @@ def fibonacci_non_optimized(n):
         return fibonacci_non_optimized(n - 1) + fibonacci_non_optimized(n - 2)
 
 def fibonacci_memo(n: int, memo: Dict[int, int] = {}) -> int:
+    """
+    Optmizing the fibonacci function using memoization.
+    This approach has linear time complexity O(n).
+    """
     if n in memo:
         return memo[n]
     if n <= 1:
